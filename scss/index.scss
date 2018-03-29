@@ -1,0 +1,44 @@
+@import 'variables';
+@import 'functions';
+@import 'footer';
+
+nav{
+    color: white !important;
+}
+
+.jumbotron {
+    background-color: #ffffff !important;
+    // min-height: 25vw;
+    // max-height: 350px !important;
+}
+
+.jumbotron img{
+    max-height: 300px;
+    width: 20%;
+    border: $brdl solid 2px !important;
+    border-top: $brdl solid 1px !important;
+    margin-top: -20px !important;
+}
+
+.btn{
+    // border-style: outset;
+    border-bottom: solid $brd 2px !important;
+    
+}
+
+
+.tools ul, li{
+    border: none !important;
+    font-weight: 600;
+    // font-size: 110% !important;
+}
+
+section .langicon{
+    top: -4px !important;
+}
+
+// @media(max-width:767px){
+//     body{
+//         font-size:75%;
+//     }
+// }

@@ -1,0 +1,23 @@
+$prim: rgb(11, 136, 173);
+$primd: darken($prim, 10%);
+$priml: lighten($prim, 10%);
+$prim1: rgba(11, 136, 173, 0.5);
+$prim2: rgba(11, 136, 173, 0.2);
+$prim3: rgba(11, 136, 173, 0.05);
+
+$inf: rgb(55, 148, 253);
+$infd: darken($inf, 10%);
+$infl: lighten($inf, 10%);
+$inf1: rgba(55, 148, 253, 0.5);
+$inf2: rgba(55, 148, 253, 0.2);
+$inf3: rgba(55, 148, 253, 0.05);
+
+$brd: rgba(75, 75, 75, 0.18);
+$brdl: rgba(131, 131, 131, 0.18);
+$brdd: rgba(44, 44, 44, 0.18);
+
+$whited: rgba(255, 255, 255, 0.7);
+$whited2: rgba(255, 255, 255, 0.9);
+$divider: #aadcd2;
+
+$blackl: rgba(0, 0, 0, 0.8);

@@ -1,0 +1,42 @@
+@import 'variables';
+@import 'functions';
+
+// Variable Overrides from Bootsrtap
+$theme-colors: (
+  "primary": $prim,
+  "info" : $inf
+);
+$body-bg: $prim3;
+
+// Bootstrap Sass Imports
+@import "node_modules/bootstrap/scss/bootstrap";
+
+body{
+  // margin:0;
+  // padding:0;
+  font-size:100%;
+  // line-height: 1.6;
+  min-width: 580px;
+  font-family: 'Lato', sans-serif
+}
+
+.nav-link{
+  color: $whited !important;
+}
+.nav-link:hover{
+  color: #fff !important;
+}
+
+nav{
+  border-bottom: solid $brd 2px !important;
+}
+.container{
+  margin-top: 60px;
+}
+.jumbotron{
+  border-top: 2px solid $brd;
+}
+.btn{
+  // border-style: outset;
+  border-bottom: solid $brd 2px !important;
+}
