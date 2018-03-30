@@ -1,11 +1,6 @@
 #sidebar {
   top: 80px; }
 
-#sidebar .list-group-item, #sidebar.list-group {
-  border: none !important;
-  font-weight: 600;
-  background: rgba(11, 136, 173, 0.05); }
-
 /*---- Footer Start-----*/
 footer {
   margin-top: 1rem;
