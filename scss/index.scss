@@ -1,10 +1,6 @@
 @import 'variables';
 @import 'functions';
-@import 'footer';
 
-nav{
-    color: white !important;
-}
 
 .jumbotron {
     background-color: #ffffff !important;
@@ -23,13 +19,16 @@ nav{
 .btn{
     // border-style: outset;
     border-bottom: solid $brd 2px !important;
-    
 }
 
+section .card-header h4{
+    margin: 0;
+}
 
-.tools ul, li{
+.skills ul, .skills li{
     border: none !important;
     font-weight: 600;
+    padding: 0.8rem 0 !important;
     // font-size: 110% !important;
 }
 

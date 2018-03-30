@@ -1,42 +1,3 @@
-/*---- Footer Start-----*/
-footer {
-  background-color: #69affe;
-  width: 100%; }
-
-.follow1 {
-  list-style-type: none;
-  text-align: center; }
-
-.follow1 li {
-  display: inline; }
-
-.follow1 i {
-  font-size: 250%;
-  padding: 1rem 4%;
-  color: rgba(255, 255, 255, 0.7); }
-
-.follow1 i:hover {
-  color: #fff; }
-
-footer ul {
-  margin: 0;
-  padding: 0; }
-
-footer.socket {
-  border-top: 1px solid #aadcd2;
-  background-color: #08627d;
-  max-height: 55px;
-  margin: 0; }
-
-footer.socket p {
-  margin: 0;
-  padding: 0.5rem 0;
-  text-align: center;
-  color: #aadcd2; }
-
-nav {
-  color: white !important; }
-
 .jumbotron {
   background-color: #ffffff !important; }
 
@@ -50,9 +11,13 @@ nav {
 .btn {
   border-bottom: solid rgba(75, 75, 75, 0.18) 2px !important; }
 
-.tools ul, li {
+section .card-header h4 {
+  margin: 0; }
+
+.skills ul, .skills li {
   border: none !important;
-  font-weight: 600; }
+  font-weight: 600;
+  padding: 0.8rem 0 !important; }
 
 section .langicon {
   top: -4px !important; }

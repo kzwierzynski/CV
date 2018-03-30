@@ -11,42 +11,46 @@
     <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="./css/bootstrap.css">
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="stylesheet" href="css/projects.css">
+    <link rel="stylesheet" href="./css/projects.css">
 </head>
 
-<body>
+<body data-spy="scroll" data-target="#sidebar" data-offset="10"
+>
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top">
-        <a class="navbar-brand" href="#">Krzysztof Zwierzyński <small class="lead">/ Projects</small></a>
-        
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
-            <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="container">
+            <a class="navbar-brand" href="index.html">Krzysztof Zwierzyński <small class="lead">/ Projects</small></a>
             
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item">
-                    <a class="nav-link" href="index.html">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="projects.html">Projects</a>
-                </li>
-                        <!-- <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="navbarDropdown" data-toggle="dropdown">
-                                    Projects
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="projects.html#frontend">Front-end</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="projects.html#fullstack">Full Stack</a>
-                            </div>
-                        </li> -->
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+                
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="projects.html">Projects</a>
+                    </li>
+                            <!-- <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle dropdown-toggle-split" href="#" id="navbarDropdown" data-toggle="dropdown">
+                                        Projects
+                                </a>
+                                <div class="dropdown-menu">
+                                    <a class="dropdown-item" href="projects.html#frontend">Front-end</a>
+                                    <div class="dropdown-divider"></div>
+                                    <a class="dropdown-item" href="projects.html#fullstack">Full Stack</a>
+                                </div>
+                            </li> -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contact</a>
+                    </li>
+                </ul>
+            </div>
         </div>
     </nav>
-    <div class="container"> 
+
+    <div class="container px-0"> 
         <div class="jumbotron p-0">
             <section id="wrapper" class="skewed">
                 <div class="layer bottom">
@@ -84,7 +88,7 @@
                 </div>
             </div>
         </section>
-    
+
         <section id="fullstack">
             <div class="card border mb-4">
                 <div class="card-header">
@@ -95,6 +99,60 @@
             </div>
         </section>
 
+        <div class="gridWrap">
+            <section class="frotend" id="frontend">
+                <header class="showcase">
+                    <h1>Your Web Presence</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Modi, ipsam! Nihil quo minima nulla atque!</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </header>
+                <div class="top-box top-box-a">
+                    <h4>Membership</h4>
+                    <p class="price">$199/mo</p>
+                    <a href="" class="btn btn-primary">Buy Now</a>
+                </div>
+                <div class="top-box top-box-b">
+                    <h4>Pro Membership</h4>
+                    <p class="price">$299/mo</p>
+                    <a href="" class="btn btn-primary">Buy Now</a>
+                </div>
+            </section>
+            
+            <!-- Boxes Section -->
+            <section class="boxes">
+                <div class="box">
+                    <i class="fa fa-pie-chart fa-4x"></i>
+                    <h3>Analytics</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, expedita?</p>
+                </div>
+                <div class="box">
+                    <i class="fa fa-globe fa-4x"></i>
+                    <h3>Marketing</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, expedita?</p>
+                </div>
+                <div class="box">
+                    <i class="fa fa-cog fa-4x"></i>
+                    <h3>Development</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, expedita?</p>
+                </div>
+                <div class="box">
+                    <i class="fa fa-users fa-4x"></i>
+                    <h3>Support</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, expedita?</p>
+                </div>
+            </section>
+        
+            <!-- Info Section -->
+            <section class="info">
+                <img src="https://image.ibb.co/j4Qz8x/pic1.jpg" alt="">
+                <div>
+                    <h2>Your Business On The Web</h2>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae alias reiciendis deleniti possimus nemo non repellendus?
+                    Quae atque vero modi quidem! Autem cupiditate fugit doloribus ad amet, asperiores provident commodi.</p>
+                    <a href="#" class="btn btn-primary">Learn More</a>
+                </div>
+            </section>
+        </div>
     </div>
     <!--               FOOTER                      -->
     <footer class="follow1">
@@ -112,7 +170,7 @@
     
     <footer class="socket"> <p>&copy PANANIMALS Web Development Studio 2018 </p> </footer>
 
-    <script src="js/projects.js"></script>
+    <script src="./js/projects.js"></script>
     <script src="./js/jquery.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
 </body>

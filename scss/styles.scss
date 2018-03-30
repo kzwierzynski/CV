@@ -1,5 +1,7 @@
 @import 'variables';
 @import 'functions';
+@import 'sidebar';
+@import 'footer';
 
 // Variable Overrides from Bootsrtap
 $theme-colors: (
@@ -12,12 +14,27 @@ $body-bg: $prim3;
 @import "node_modules/bootstrap/scss/bootstrap";
 
 body{
-  // margin:0;
-  // padding:0;
   font-size:100%;
   // line-height: 1.6;
   min-width: 580px;
-  font-family: 'Lato', sans-serif
+  font-family: 'Lato', sans-serif;
+  padding-top: 50px;
+}
+
+a.anchor {
+  display: block;
+  position: relative;
+  top: -80px;
+  visibility: hidden;
+}
+
+.main-col{
+  margin: 0;
+  padding: 0;
+}
+
+.sideNav{
+  padding: 0 30px 0 0;
 }
 
 .nav-link{
@@ -29,14 +46,12 @@ body{
 
 nav{
   border-bottom: solid $brd 2px !important;
+  margin-bottom: 2px;
 }
-.container{
-  margin-top: 60px;
-}
+
 .jumbotron{
   border-top: 2px solid $brd;
 }
 .btn{
-  // border-style: outset;
   border-bottom: solid $brd 2px !important;
 }
