@@ -175,7 +175,7 @@ i.icon-sass {
   .fullstack {
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    grid-template-areas: "s2 s2 s2" "s2 s2 s2" "b5 b5 b1" "b2 b3 b4"; } }
+    grid-template-areas: "s2 s2 s2" "s2 s2 s2" "b1 b5 b5" "b2 b3 b4"; } }
 
 @media (max-width: 767px) {
   .frotend {
