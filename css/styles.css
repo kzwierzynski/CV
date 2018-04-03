@@ -5,7 +5,8 @@
 footer {
   margin-top: 1rem;
   background-color: #69affe;
-  width: 100%; }
+  width: 100%;
+  border-top: solid rgba(75, 75, 75, 0.18) 2px; }
 
 .follow1 {
   list-style-type: none;
