@@ -37,14 +37,14 @@ color:#222;
 
 .layer img{
 position: absolute;
-width:30%;
+width:40%;
 top:50%;
 left: 50%;
 transform:translate(-50%, -50%);
 }
 
 .layer h1{
-font-size:2em;
+font-size:4em;
 }
 
 .bottom{
@@ -110,12 +110,16 @@ margin-left:500px;
     #wrapper,.layer, .content-wrap{
         height: 349px;
     }
+    .layer h1{
+    font-size:3em;
+    }
 }
 
 @media(max-width:991px){
     body{
         font-size:75%;
     }
+    
     #wrapper,.layer, .content-wrap{
         height: 301px !important;
     }
@@ -127,6 +131,9 @@ margin-left:500px;
     // }
     #wrapper,.layer, .content-wrap{
         height: 265px !important;
+    }
+    .layer h1{
+        font-size:2.5em;
     }
 }
 

@@ -6,7 +6,7 @@ let bottomWrap = bottomLayer.querySelector('.content-wrap') //added
 let handle = wrapper.querySelector('.handle');
 let bodie = document.body;
 //initializing
-let skew = 500;  // because of the margin
+let skew = 500+1;  // because of the margin
 let delta = 0;
 
 //setting width of the layers and their content to the width of wrapper

@@ -19,7 +19,7 @@ display: inline;
 }
 
 .follow1 i{
-font-size: 250%;
+font-size: 3rem;
 padding: 1rem 4%;
 color: $whited;
 }
@@ -46,4 +46,10 @@ margin: 0;
 padding: 0.5rem 0;
 text-align: center;
 color: $divider;
+}
+
+@media(max-width:767px){
+    // .follow1 i{
+    //     font-size: 3rem;
+    // }
 }
