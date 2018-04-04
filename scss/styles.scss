@@ -1,6 +1,5 @@
 @import 'variables';
 @import 'functions';
-@import 'sidebar';
 @import 'footer';
 
 // Variable Overrides from Bootsrtap
@@ -18,7 +17,7 @@ body{
   // line-height: 1.6;
   min-width: 580px;
   font-family: 'Lato', sans-serif;
-  padding-top: 50px;
+  padding-top: 60px;
 }
 
 a.anchor {
@@ -54,4 +53,11 @@ nav{
 }
 .btn{
   border-bottom: solid $brd 2px !important;
+}
+
+@media(max-width:991px){
+  .nav-link{
+    font-size: 120%;
+    line-height: 180%;
+  }
 }

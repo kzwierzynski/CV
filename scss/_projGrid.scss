@@ -80,7 +80,7 @@
   color: var(--light);
 }
 .showcaseTxt .btn{
-  animation: pulse_w 5s ease-in-out infinite;
+  animation: pulse_w 3s ease-in-out infinite;
 }
 
 @keyframes pulse_w {
@@ -88,7 +88,7 @@
     -moz-box-shadow: 0 0 0 0 $whited3;
     box-shadow: 0 0 0 0 $whited3;
   }
-  30% {
+  50% {
     -moz-box-shadow: 0 0 0 0 $whited;
     box-shadow: 0 0 0 0 $whited;
   }
@@ -165,7 +165,7 @@ i.icon-sass{
 }
 
 .showcaseTxt2 .btn{
-  animation: pulse_b 5s ease-in-out infinite;
+  animation: pulse_b 3s ease-in-out infinite;
 }
 
 @keyframes pulse_b {
@@ -173,7 +173,7 @@ i.icon-sass{
     -moz-box-shadow: 0 0 0 0 $blackl2;
     box-shadow: 0 0 0 0 $blackl2;
   }
-  30% {
+  50% {
     -moz-box-shadow: 0 0 0 0 $blackl1;
     box-shadow: 0 0 0 0 $blackl1;
   }

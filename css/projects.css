@@ -61,13 +61,13 @@
   color: var(--light); }
 
 .showcaseTxt .btn, .showcaseTxt2 .btn {
-  animation: pulse_w 5s ease-in-out infinite; }
+  animation: pulse_w 3s ease-in-out infinite; }
 
 @keyframes pulse_w {
   0% {
     -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0);
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0); }
-  30% {
+  50% {
     -moz-box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7);
     box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.7); }
   100% {
@@ -120,13 +120,13 @@ i.icon-sass {
   color: rgba(0, 0, 0, 0.8); }
 
 .showcaseTxt2 .btn {
-  animation: pulse_b 5s ease-in-out infinite; }
+  animation: pulse_b 3s ease-in-out infinite; }
 
 @keyframes pulse_b {
   0% {
     -moz-box-shadow: 0 0 0 0 transparent;
     box-shadow: 0 0 0 0 transparent; }
-  30% {
+  50% {
     -moz-box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6);
     box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.6); }
   100% {
