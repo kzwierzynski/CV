@@ -36,6 +36,11 @@ footer.socket p {
   text-align: center;
   color: #aadcd2; }
 
+.footers {
+  width: 100%;
+  position: absolute;
+  bottom: 0; }
+
 /*!
  * Bootstrap v4.0.0 (https://getbootstrap.com)
  * Copyright 2011-2018 The Bootstrap Authors
