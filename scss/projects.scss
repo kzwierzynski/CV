@@ -93,4 +93,26 @@ margin-left:-500px; //to hide left skewed side of the top layer (30degs)
 transform: skew(30deg);
 margin-left:500px;
 }
+.span2{
+    display: none;
+}
 
+@media (max-width: 450px) {
+    .layer p {
+      display: none;
+    }
+    .span1{
+      display: none;
+    }
+    .span2{
+        display: inherit;
+    }
+    .layer h2{
+        font-size: 1.5rem;
+        text-transform: uppercase;
+    }
+    .showcaseTxt h1{
+        font-size: 2rem;
+    }
+
+}

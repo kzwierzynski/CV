@@ -288,3 +288,19 @@ i .icon-html5-alt {
 .skewed .top .content-wrap {
   transform: skew(30deg);
   margin-left: 500px; }
+
+.span2 {
+  display: none; }
+
+@media (max-width: 450px) {
+  .layer p {
+    display: none; }
+  .span1 {
+    display: none; }
+  .span2 {
+    display: inherit; }
+  .layer h2 {
+    font-size: 1.5rem;
+    text-transform: uppercase; }
+  .showcaseTxt h1, .showcaseTxt2 h1 {
+    font-size: 2rem; } }
