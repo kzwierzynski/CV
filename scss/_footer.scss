@@ -5,7 +5,7 @@
 footer{
     margin-top: 1rem;
     background-color: $infl;
-    width: 100%;
+    // width: 100%;
     border-top: solid $brd 2px;
 }
 
@@ -42,7 +42,7 @@ margin: 0;
 
 footer.socket p{
 margin: 0;
-// padding: 5px 0 9px 0;
+padding: 5px 0 9px 0;
 padding: 0.5rem 0;
 text-align: center;
 color: $divider;

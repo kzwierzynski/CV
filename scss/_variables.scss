@@ -12,9 +12,9 @@ $inf1: rgba(55, 148, 253, 0.5);
 $inf2: rgba(55, 148, 253, 0.2);
 $inf3: rgba(55, 148, 253, 0.05);
 
-$brd: rgba(75, 75, 75, 0.18);
-$brdl: rgba(131, 131, 131, 0.18);
-$brdd: rgba(44, 44, 44, 0.18);
+$brd: rgba(75, 75, 75, 0.25);
+$brdl: rgba(131, 131, 131, 0.25);
+$brdd: rgba(44, 44, 44, 0.25);
 
 $whited: rgba(255, 255, 255, 0.7);
 $whited2: rgba(255, 255, 255, 0.9);
@@ -25,4 +25,6 @@ $blackl: rgba(0, 0, 0, 0.8);
 $blackl1: rgba(0, 0, 0, 0.6);
 $blackl2: rgba(0, 0, 0, 0.0);
 
-$shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+$shadow: 0 1px 5px $brdd;
+$shadowPrim: 0 1px 5px $prim1;
+$shadowInf: 0 1px 5px $inf1;

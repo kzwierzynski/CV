@@ -16,19 +16,39 @@
 
 %sc_h1{
   font-size: 4rem;
-  margin-bottom: 0;
+  // margin-bottom: 0;
 }
 
 %sc_p{
-  font-size: 1.5rem;
   margin-top: 0;
 }
 
 %box{
     text-align: center;
-    padding: 1.5rem 1rem;
-    box-shadow: var(--shadow);
+    box-shadow: $shadow;
+    position: relative;
   }
+
+%box_h3{
+  width: 100%;
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  margin: 0;
+  padding: 0;
+}
+
+%box_i{
+  position: absolute;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 72px;
+  margin: 0;
+  padding: 0;
+}
+
 
 /* Grid Wrap */
 .gridWrap img {
@@ -48,14 +68,14 @@
   grid-template-rows: repeat(3, 1fr);
 }
 
-/* Showcase carousel */
-.showcase {
+/* showcase1 carousel */
+.showcase1 {
   @extend %flex;
   grid-column: span 3;
   grid-row: span 2;
-  min-height: 400px;
+  min-height: 250px;
   background-color: $blackl;
-  box-shadow: var(--shadow);
+  box-shadow: $shadow;
 }
 
 .showcaseTxt{
@@ -66,8 +86,6 @@
   z-index: 2;
   height: 100%;
   width: 100%;
-  // top: 0;
-  // bottom: 0;
 }
 
 .showcaseTxt h1 {
@@ -75,11 +93,12 @@
   color: var(--light);
 }
 
-.showcaseTxt p {
+.showcaseTxt h5 {
   @extend %sc_p;
   color: var(--light);
 }
 .showcaseTxt .btn{
+  margin-top: 10px;
   animation: pulse_w 3s ease-in-out infinite;
 }
 
@@ -111,14 +130,29 @@
 }
 
 .box i{
+  @extend %box_i;
   color: $prim;
-  font-size: 72px;
-  margin: 1rem auto;
 }
 
-.box i.icon-javascript-alt,
-i.icon-sass{
-  font-size: 76px;
+.box h3{
+  @extend %box_h3;
+}
+
+// because of fizz icons specifics different translation and size
+i.icon-javascript-alt{
+  font-size: 92px;
+  transform: translate(calc(-50% + 9px), -15px);
+}
+
+// because of fizz icons specifics different translation and size
+i.icon-nodejs{
+  font-size: 88px;
+  transform: translate(calc(-50% + 8px), -6px);
+}
+
+i .icon-css3-alt,
+i .icon-html5-alt{
+  transform: translateX(calc(-50% + 4px));  
 }
 
 
@@ -138,9 +172,10 @@ i.icon-sass{
 .showcase2 {
   // @extend %flex;
   grid-area: s2;
-  min-height: 400px;
-  box-shadow: var(--shadow);
+  min-height: 250px;
+  box-shadow: $shadow;
   padding: 0;
+  margin-bottom: -20px;
 }
 
 .showcaseTxt2{
@@ -150,21 +185,19 @@ i.icon-sass{
   background: url("../img/fullstackShowcase.png");
   background-size: cover;
   background-position: center;
-  width: 100%;
-  height: 100%;
-  // z-index: 1;
 }
 
 .showcaseTxt2 h1{
   @extend %sc_h1;
   color: $blackl;
 }
-.showcaseTxt2 p{
+.showcaseTxt2 h5{
   @extend %sc_p;
   color: $blackl;
 }
 
 .showcaseTxt2 .btn{
+  margin-top: 10px;  
   animation: pulse_b 3s ease-in-out infinite;
 }
 
@@ -192,26 +225,33 @@ i.icon-sass{
 #b5{  grid-area: b5;}
 
 .box1 {
-  @extend .box;
+  @extend %box;
   background: var(--dark);
   color: white;
 }
 
 .box1 i{
+  @extend %box_i;
   color: $infl;
-  font-size: 72px;
-  margin: 1rem auto;
 }
 
 .box1 img{
+  @extend %box_i;
   height: 72px;
-  margin: 1rem auto;
+  // because of fizz icons specifics different translation
+  transform: translate(-50%, 18px); 
 }
 
 .box1 h1{
+  @extend %box_i;
   color: $infl;
   font-size: 64px;
-  margin: 1rem auto;
+  // because of fizz icons specifics different translation
+  transform: translate(-50%, 18px); 
+}
+
+.box1 h3{
+  @extend %box_h3;
 }
 
 
@@ -238,26 +278,30 @@ i.icon-sass{
 @media (max-width: 767px) {
   .frotend {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
   }
 
   .fullstack {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-template-areas: 
-          "s2 s2"
           "s2 s2"
           "b5 b5"
           "b1 b2"
           "b3 b4";
   }  
   
-  .showcase{
+  .showcase1{
     grid-column: 1 / span 2;
+    grid-row: 1 / span 1;
   }
 
   .showcaseTxt h1,
   .showcaseTxt2 h1 {
     font-size: 2.5rem;
+  }
+
+  .showcase2{
+    margin:0;
   }
 }

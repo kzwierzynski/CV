@@ -2,25 +2,45 @@
   top: 80px; }
 
 .jumbotron {
-  background-color: #ffffff !important; }
+  background-color: #fff;
+  padding-top: 2rem;
+  margin-top: 20px; }
 
 .jumbotron img {
   max-height: 300px;
   width: 20%;
-  border: rgba(131, 131, 131, 0.18) solid 2px !important;
-  border-top: rgba(131, 131, 131, 0.18) solid 1px !important;
-  margin-top: -20px !important; }
+  border: rgba(131, 131, 131, 0.25) solid 2px !important;
+  border-top: rgba(131, 131, 131, 0.25) solid 1px !important; }
 
 .btn {
-  border-bottom: solid rgba(75, 75, 75, 0.18) 2px !important; }
+  border-bottom: solid rgba(75, 75, 75, 0.25) 2px !important; }
 
 section .card-header h4 {
   margin: 0; }
 
-.skills ul, .skills li {
+.card, .jumbotron {
   border: none !important;
-  font-weight: 600;
-  padding: 0.8rem 0 !important; }
+  box-shadow: 0 1px 5px rgba(44, 44, 44, 0.25); }
 
-section .langicon {
-  top: -4px !important; }
+.card-header {
+  background: #0b88ad;
+  color: #fff; }
+
+.card p {
+  margin-bottom: 0.5rem; }
+
+.skills ul, .skills li {
+  border: none;
+  font-weight: 600;
+  padding: 0.8rem 0;
+  font-size: 110%; }
+
+@media (max-width: 768px) {
+  .skills ul {
+    text-align: center; }
+  .skills li {
+    font-size: 120%; } }
+
+@media (max-width: 575px) {
+  body {
+    font-size: 80%; } }

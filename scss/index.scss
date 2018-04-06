@@ -4,9 +4,9 @@
 
 
 .jumbotron {
-    background-color: #ffffff !important;
-    // min-height: 25vw;
-    // max-height: 350px !important;
+    background-color: #fff;
+    padding-top: 2rem;
+    margin-top:20px;
 }
 
 .jumbotron img{
@@ -14,11 +14,9 @@
     width: 20%;
     border: $brdl solid 2px !important;
     border-top: $brdl solid 1px !important;
-    margin-top: -20px !important;
 }
 
 .btn{
-    // border-style: outset;
     border-bottom: solid $brd 2px !important;
 }
 
@@ -26,19 +24,39 @@ section .card-header h4{
     margin: 0;
 }
 
-.skills ul, .skills li{
+.card, .jumbotron{
     border: none !important;
+    box-shadow: $shadow;
+}
+
+.card-header{
+    background: $prim;
+    color: #fff;
+}
+
+.card p{
+    margin-bottom: 0.5rem;
+}
+
+
+.skills ul, .skills li{
+    border: none;
     font-weight: 600;
-    padding: 0.8rem 0 !important;
-    // font-size: 110% !important;
+    padding: 0.8rem 0;
+    font-size: 110%;
 }
 
-section .langicon{
-    top: -4px !important;
-}
+@media(max-width:768px){
+    .skills ul{
+        text-align: center;
+    }
+    .skills li{
+        font-size: 120%;        
+    }
+  }
 
-// @media(max-width:767px){
-//     body{
-//         font-size:75%;
-//     }
-// }
+  @media(max-width:575px){
+    body{
+      font-size: 80%;
+    }
+  }
