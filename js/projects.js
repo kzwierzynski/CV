@@ -22,7 +22,7 @@ function setWidth(){
   wrapper.style.height = img.height * 1.8 + 'px';
   sc2.style.height = sc1.offsetHeight + 'px';
   
-  console.dir(sc1.offsetHeight);
+  // console.dir(sc1.offsetHeight);
 }
 
 
