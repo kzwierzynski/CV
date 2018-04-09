@@ -90,6 +90,10 @@ ul{
   transition: background-color 2s ease-out;
 }
 
+.invalid-feedback{
+  font-size: 0.8rem;
+}
+
 /* LARGE SCREENS */
 @media(min-width:768px){
   .contact form{

@@ -8,10 +8,15 @@
         
         <link rel="shortcut icon" type="image/png" href="img/Pananimals_logo1.png"/>
         <link href='https://fonts.googleapis.com/css?family=Lato'> 
+
         <link rel='stylesheet' href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="stylesheet" href="./css/bootstrap.css">
-        <link rel="stylesheet" href="./css/styles.css">
+        <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"/> -->
+
+
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/css/bootstrapValidator.min.css"/>
+        <link rel="stylesheet" href="./css/styles.css">
         <link rel="stylesheet" href="./css/contact.css">
     </head>
 
@@ -41,7 +46,7 @@
             </div>
         </nav>
 
-        <div class="container">     
+        <div class="container">
             <div class="wrapper animated bounceInLeft">
                 <div class="company-info">
                     <img class="rounded-circle border border-top-0 d-none d-sm-block" src="./img/KZ_foto.jpg"> <br>
@@ -53,32 +58,50 @@
                     </ul>
                 </div>
                 <div class="contact">
+                    <div id="limitReached" class="alert alert-danger d-none">
+                        <h5>Daily limit of emails sent from this page is reached, please send an email manually.</h5>
+                    </div>     
                     <h3>Email Me</h3>
-                    <form id="contactForm">
-                        <p>
-                            <label>Name</label>
-                            <input type="text" name="name" placeholder="Your Name (required)">
-                        </p>
-                        <p>
-                            <label>Company</label>
-                            <input type="text" name="company" placeholder="Company Name (required)">
-                        </p>
-                        <p>
-                            <label>Email Address</label>
-                            <input type="email" name="email" placeholder="Email (required)">
-                        </p>
-                        <p>
-                            <label>Phone Number</label>
-                            <input type="tel" name="phone" placeholder="Phone Number">
-                        </p>
-                        <p class="full">
-                            <label>Message</label>
-                            <textarea name="message" rows="5" placeholder="Message (required)"></textarea>
-                        </p>
-                        <p class="full">
-                            <input type="submit" id="js_send" value="Send" />
-                        </p>
-                    </form>
+                    <form class="needs-validation" id="contactForm" novalidate>
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input class="form-control" type="text" name="name" id="name" placeholder="Your Name (required)" required minlength="2" maxlength="40" pattern="^[a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ]+(([',. -][a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ ])?[a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ]*)*$">
+                                <div class="invalid-feedback">
+                                    Please insert a valid name (2-40 characters).
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="company">Company</label>
+                                <input class="form-control" type="text" name="company" id="company" placeholder="Company Name (required)" required minlength="2" maxlength="40">
+                                <div class="invalid-feedback">
+                                    Please insert your company name (2-30 characters).
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">Email Address</label>
+                                <input class="form-control" type="email" name="email" id="email" placeholder="Email (required)" required>
+                                <div class="invalid-feedback">
+                                    Please insert a valid email address.
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone">Phone Number</label>
+                                <input class="form-control" type="tel" name="phone" id="phone" placeholder="Phone Number" pattern="^[(]?[\+]?[0-9]{2,4}[)]?[-\s\. ]?[0-9]{2,3}[-\s\. ]?[0-9]{2,3}[-\s\. ]?[0-9]{2,3}$">
+                                <div class="invalid-feedback">
+                                    Please insert a valid phone number or leave it empty.
+                                </div>
+                            </div>
+                            <div class="form-group full">
+                                <label for="message">Message</label>
+                                <textarea class="form-control" name="message" rows="5" id="message" placeholder="Message (required)" required minlength="2" maxlength="40"></textarea>
+                                <div class="invalid-feedback">
+                                    Please use at least 20 characters, maximum 500.
+                                </div>
+                            </div>
+                            <div class="form-group full">
+                                <input type="submit" id="js_send" value="Send" />
+                            </div>
+                        </form>
                 </div>
             </div>
                 
@@ -104,6 +127,7 @@
         <!-- <script src="./js/popper.min.js"></script> -->
         <script src="./js/jquery.min.js"></script>
         <script src="./js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.bootstrapvalidator/0.5.2/js/bootstrapValidator.min.js"></script>
         <script src="./js/contact.js"></script>
         
     </body>

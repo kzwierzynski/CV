@@ -1,12 +1,35 @@
 let wrapper = document.querySelector('.wrapper');
 let sendButton = document.getElementById("js_send");
 let form_id_js = "contactForm";
-
 let data_js = {
     "access_token": "w7t3n8h61bcuftfgna8i4f7g"
 };
 
 
+//  Form Validation
+(function() {
+    'use strict';
+    window.addEventListener('load', function() {
+        // Fetch all the forms we want to apply custom Bootstrap validation styles to
+        let forms = document.getElementsByClassName('needs-validation');
+        // Loop over them and prevent submission
+        let validation = Array.prototype.filter.call(forms, function(form) {
+            form.addEventListener('submit', function(event) {
+                event.preventDefault();
+                form.classList.add('was-validated');
+                if (form.checkValidity() === false) {
+                event.stopPropagation();
+                return false;
+                } else {
+                    js_send();
+                    form.classList.remove('was-validated');
+                }
+            }, false);
+        });
+    }, false);    
+})();
+
+// when successfully sent email
 function js_onSuccess() {
     $(".wrapper").addClass("bounceOutRight");
     setTimeout(function(){
@@ -20,39 +43,13 @@ function js_onSuccess() {
         sendButton.disabled = false;
         sendButton.removeAttribute("title");
     }, 120000);
-
 }
 
+// when problem with sending an email
 function js_onError(error) {
-    // remove this to avoid redirect
-    window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
-}
-
-
-//  Form Validation
-function isOk(regEx, input, msgStr){
-    if(!regEx.test(input)){				//if content that was input does not pass the validation
-        alert(msgStr);
-        return false;
-    }else{
-        return true;
-    }
-}
-function checkName(name){
-    var helpString="Please, enter a valid name";
-    return isOk(/^[a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ]+(([',. -][a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ ])?[a-zA-ZżźćńółęąśŻŹĆĄŚĘŁÓŃ]*)*$/, name, helpString);
-}
-function checkCompany(company){
-    var helpString="Please, enter a valid company name";
-    return isOk(/^[0-9A-z -./+&]{2,20}/, company, helpString);
-}
-function checkPhone(phone){
-    var helpString="Phone number you entered is not valid. \nEnter a valid number, eg. +48 222 222 222 or 32 2222222\nOr leave it empty.";
-    return isOk(/^[\+]?[(]?[0-9]{2,4}[)]?[-\s\. ]?[0-9]{2,3}[-\s\. ]?[0-9]{2,3}[-\s\. ]?[0-9]{2,3}$/, phone, helpString);
-}
-function checkEmail(email){
-    var helpString="Please, enter a valid email address eg. pananimals@pan-animals.pl";
-    return isOk(/[A-Za-z0-9._-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}/, email, helpString);
+    $("#limitReached").removeClass("d-none");
+    //redirect
+    // window.location = window.location.pathname + "?message=Email+could+not+be+sent.&isError=1";
 }
 
 // clear form after being sent
@@ -73,19 +70,6 @@ function js_send() {
     let email = document.querySelector("#" + form_id_js + " [name='email']").value;
     let phone = document.querySelector("#" + form_id_js + " [name='phone']").value;
     
-    if ( (!msg) || (!name) || (!company) || (!email) ){
-        alert("Please fill in all the required information.");
-        return false;
-
-    } else{
-        if ( !checkName(name) || !checkCompany(company) || !checkEmail(email)) {
-            return false;
-        }
-        
-        if(phone){
-            if (!checkPhone(phone)) return false;
-        }
-    }
 
     sendButton.value='Sending…';
     sendButton.disabled=true;
@@ -117,8 +101,6 @@ function js_send() {
     return false;
 }
 
-sendButton.onclick = js_send;
-
 function toParams(data_js) {
     let form_data = [];
     for ( let key in data_js ) {
@@ -127,8 +109,3 @@ function toParams(data_js) {
 
     return form_data.join("&");
 }
-
-let js_form = document.getElementById(form_id_js);
-js_form.addEventListener("submit", function (e) {
-    e.preventDefault();
-});
