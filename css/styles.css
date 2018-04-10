@@ -6094,9 +6094,10 @@ nav {
   box-shadow: 0 1px 5px rgba(44, 44, 44, 0.25); }
 
 a.anchor {
-  display: none;
+  display: block;
   position: relative;
-  top: -80px; }
+  top: -80px;
+  visibility: hidden; }
 
 .btn {
   border-bottom: solid rgba(131, 131, 131, 0.25) 2px !important; }
