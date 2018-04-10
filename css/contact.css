@@ -15,7 +15,7 @@ ul {
 
 .wrapper {
   margin: 3rem 0;
-  box-shadow: 0 0 10px 0 rgba(72, 94, 116, 0.7); }
+  box-shadow: 0 1px 5px rgba(44, 44, 44, 0.25); }
 
 .wrapper > * {
   padding: 1em; }

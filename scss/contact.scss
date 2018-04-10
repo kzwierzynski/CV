@@ -24,7 +24,7 @@ ul{
 
 .wrapper{
   margin: 3rem 0;
-  box-shadow: 0 0 10px 0 rgba(72,94,116,0.7);
+  box-shadow: $shadow;
 }
 
 .wrapper > *{
@@ -81,7 +81,7 @@ ul{
   background:$infl;
   border:0;
   text-transform: uppercase;
-  color:#fff;    
+  color:$white;    
 }
 
 .contact form #js_send:hover,.contact form #js_send:focus{
