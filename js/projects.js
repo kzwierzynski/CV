@@ -31,7 +31,8 @@ document.addEventListener('DOMContentLoaded', function(){
   // added coz not using vw anymore -> in container
   setWidth();
   topLayer.style.width= bodie.offsetWidth/2 -wrapper.offsetLeft + skew + 'px';    
-  wrapper.style.height = img.height * 1.6 + 'px'; // needed at initialization to set size of jumbotron
+  wrapper.style.height = img.height * 1.8 + 'px'; // needed at initialization to set size of jumbotron
+  sc2.style.height = sc1.offsetHeight + 'px';
   
   wrapper.addEventListener('mousemove', function(e){
     delta = (e.clientX - bodie.offsetWidth / 2) *0.3;  //na srodku=0, im dalej od środka tym bardziej popycha "belkę" oddzielającą warstwy
