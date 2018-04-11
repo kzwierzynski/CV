@@ -1,14 +1,5 @@
-let wrapper = document.getElementById('wrapper');
-let topLayer = wrapper.querySelector('.top');
-let topWrap = topLayer.querySelector('.content-wrap');  //added
-let bottomLayer = wrapper.querySelector('.bottom');     //added
-let bottomWrap = bottomLayer.querySelector('.content-wrap') //added
-let handle = wrapper.querySelector('.handle');
-let bodie = document.body;
-let img = wrapper.querySelector('img');
+let wrapper, topLayer, topWrap, bottomLayer, bottomWrap, handle, bodie, img, sc1, sc2;
 
-let sc1 = document.querySelector('.showcase1');
-let sc2 = document.querySelector('.showcase2');
 //initializing
 let skew = 500+1;  // because of the margin
 let delta = 0;
@@ -28,6 +19,18 @@ function setWidth(){
 
 
 document.addEventListener('DOMContentLoaded', function(){
+  
+wrapper = document.getElementById('wrapper');
+topLayer = wrapper.querySelector('.top');
+topWrap = topLayer.querySelector('.content-wrap');  //added
+bottomLayer = wrapper.querySelector('.bottom');     //added
+bottomWrap = bottomLayer.querySelector('.content-wrap') //added
+handle = wrapper.querySelector('.handle');
+bodie = document.body;
+img = wrapper.querySelector('img');
+
+sc1 = document.querySelector('.showcase1');
+sc2 = document.querySelector('.showcase2');
   // added coz not using vw anymore -> in container
   setWidth();
   topLayer.style.width= bodie.offsetWidth/2 -wrapper.offsetLeft + skew + 'px';    
