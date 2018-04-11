@@ -28,8 +28,15 @@ function setWidth(){
   console.log("at the end of setWidth: ", wrapper.offsetWidth, img.height, wrapper.style.height, sc1.offsetHeight, sc2.offsetHeight);
   // console.dir(sc1.offsetHeight);
 }
+let i=0;
+function checkResize(){ // when delays in loading page, after cache 
+    if (sc1.offsetHeight != sc2.offsetHeight) {
+      console.log(sc1.offsetHeight, sc2.offsetHeight);
+      sc2.style.height = sc1.offsetHeight + 'px';
+      console.log(sc1.style.height, sc2.style.height);
 
-
+    }
+}
 
 document.addEventListener('DOMContentLoaded', function(){
   // added coz not using vw anymore -> in container
@@ -37,7 +44,10 @@ document.addEventListener('DOMContentLoaded', function(){
   console.log("after setWidth: ", wrapper.offsetWidth, img.height, sc1.offsetHeight, sc2.offsetHeight);
   topLayer.style.width= bodie.offsetWidth/2 -wrapper.offsetLeft + skew + 'px';    
   // wrapper.style.height = img.height * 1.8 + 'px'; // needed at initialization to set size of jumbotron
-  
+
+  let tResize = setInterval(checkResize, 1000);
+
+
   wrapper.addEventListener('mousemove', function(e){
     delta = (e.clientX - bodie.offsetWidth / 2) *0.4;  //na srodku=0, im dalej od środka tym bardziej popycha "belkę" oddzielającą warstwy
       // console.log(e.clientX-wrapper.offsetLeft, delta)
