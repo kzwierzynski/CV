@@ -21,7 +21,7 @@ ul {
   padding: 1em; }
 
 .company-info {
-  background: #0eaedd;
+  background: rgba(55, 148, 253, 0.2);
   text-align: center; }
 
 .company-info img {
