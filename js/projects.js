@@ -41,7 +41,7 @@ document.addEventListener('DOMContentLoaded', function(){
   let tResize = setInterval(checkResize, 500);  //when delays in loading page, and page not yet in cache
   let tResizeOff = setTimeout( function(){
       clearInterval(tResize);
-    }, 5000);
+    }, 10000);
 
   wrapper.addEventListener('mousemove', function(e){
     delta = (e.clientX - bodie.offsetWidth / 2) *0.4;  //na srodku=0, im dalej od środka tym bardziej popycha "belkę" oddzielającą warstwy
