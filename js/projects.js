@@ -33,20 +33,6 @@ function checkResize(){ // assure proper sizing of showcase2 and jumbotron
     }
 }
 
-function isChrome() {
-  var isChromium = window.chrome, winNav = window.navigator, vendorName = winNav.vendor, isOpera = winNav.userAgent.indexOf("OPR") > -1, isIEedge = winNav.userAgent.indexOf("Edge") > -1, isIOSChrome = winNav.userAgent.match("CriOS");
-
-  if (isIOSChrome) {
-    return true;
-  } else if (
-    isChromium !== null && typeof isChromium !== "undefined" && vendorName === "Google Inc." && isOpera === false && isIEedge === false) {
-    return true;
-  } else { 
-    return false;
-  }
-}
-
-
 document.addEventListener('DOMContentLoaded', function(){
   // added setWidth(), coz not set using vw anymore -> here it's in container
   setWidth();
@@ -56,11 +42,6 @@ document.addEventListener('DOMContentLoaded', function(){
   let tResizeOff = setTimeout( function(){
       clearInterval(tResize);
     }, 5000);
-  let notChrome = !isChrome();
-
-  if(notChrome){
-    $(".notChrome").removeClass("d-none");
-  }
 
   wrapper.addEventListener('mousemove', function(e){
     delta = (e.clientX - bodie.offsetWidth / 2) *0.4;  //na srodku=0, im dalej od środka tym bardziej popycha "belkę" oddzielającą warstwy
