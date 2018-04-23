@@ -67,6 +67,11 @@ ul {
   outline: 0;
   transition: background-color 2s ease-out; }
 
+.contact form #js_send:disabled {
+  background-color: rgba(55, 148, 253, 0.2);
+  color: #aaa;
+  cursor: not-allowed; }
+
 .invalid-feedback {
   font-size: 0.8rem; }
 

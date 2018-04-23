@@ -90,9 +90,17 @@ ul{
   transition: background-color 2s ease-out;
 }
 
+.contact form #js_send:disabled {
+  background-color: $inf2;
+  color: #aaa;
+  cursor: not-allowed;
+}
+
 .invalid-feedback{
   font-size: 0.8rem;
 }
+
+
 
 /* LARGE SCREENS */
 @media(min-width:768px){
