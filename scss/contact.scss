@@ -82,6 +82,7 @@ ul{
   border:0;
   text-transform: uppercase;
   color:$white;    
+  cursor: pointer;  
 }
 
 .contact form #js_send:hover,.contact form #js_send:focus{
@@ -93,7 +94,7 @@ ul{
 .contact form #js_send:disabled {
   background-color: $inf2;
   color: #aaa;
-  cursor: not-allowed;
+  cursor: not-allowed !important;
 }
 
 .invalid-feedback{
