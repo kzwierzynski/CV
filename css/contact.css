@@ -60,7 +60,8 @@ ul {
   background: #69affe;
   border: 0;
   text-transform: uppercase;
-  color: #fff; }
+  color: #fff;
+  cursor: pointer; }
 
 .contact form #js_send:hover, .contact form #js_send:focus {
   background: #3794fd;
@@ -70,7 +71,7 @@ ul {
 .contact form #js_send:disabled {
   background-color: rgba(55, 148, 253, 0.2);
   color: #aaa;
-  cursor: not-allowed; }
+  cursor: not-allowed !important; }
 
 .invalid-feedback {
   font-size: 0.8rem; }

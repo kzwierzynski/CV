@@ -20,23 +20,19 @@
   box-shadow: 0 1px 5px rgba(44, 44, 44, 0.25);
   position: relative; }
 
-.box h3, .box1 h3 {
+.box h3, .box1 h3, .box1 .btn {
   width: 100%;
   position: absolute;
   top: 60%;
   left: 50%;
-  transform: translateX(-50%);
-  margin: 0;
-  padding: 0; }
+  transform: translateX(-50%); }
 
 .box i, .box1 i, .box1 img, .box1 h1 {
   position: absolute;
   top: 10%;
   left: 50%;
   transform: translateX(-50%);
-  font-size: 72px;
-  margin: 0;
-  padding: 0; }
+  font-size: 72px; }
 
 /* Grid Wrap */
 .gridWrap img {
@@ -187,6 +183,10 @@ i.icon-html5-alt {
   font-size: 64px;
   transform: translate(-50%, 18px); }
 
+.box1 .btn {
+  width: auto;
+  animation: pulse_w 3s ease-in-out infinite; }
+
 /* Media Queries */
 @media (max-width: 991px) {
   .frotend {
@@ -203,10 +203,8 @@ i.icon-html5-alt {
     grid-template-rows: repeat(4, 1fr); }
   .fullstack {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
-    grid-template-areas: "s2 s2" "b1 b2" "b3 b4"; }
-  #b5 {
-    display: none; }
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-areas: "s2 s2" "b1 b2" "b3 b4" "b5 b5"; }
   .showcase1 {
     grid-column: 1 / span 2;
     grid-row: 1 / span 1; }

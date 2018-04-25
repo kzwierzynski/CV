@@ -34,8 +34,8 @@
   top: 60%;
   left: 50%;
   transform: translateX(-50%);
-  margin: 0;
-  padding: 0;
+  // margin: 0;
+  // padding: 0;
 }
 
 %box_i{
@@ -44,8 +44,8 @@
   left: 50%;
   transform: translateX(-50%);
   font-size: 72px;
-  margin: 0;
-  padding: 0;
+  // margin: 0;
+  // padding: 0;
 }
 
 
@@ -253,6 +253,12 @@ i.icon-html5-alt{
   @extend %box_h3;
 }
 
+.box1 .btn{
+  @extend %box_h3;
+  width: auto;
+  animation: pulse_w 3s ease-in-out infinite;
+}
+
 
 
 /* Media Queries */
@@ -282,17 +288,14 @@ i.icon-html5-alt{
 
   .fullstack {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(3, 1fr);
+    grid-template-rows: repeat(4, 1fr);
     grid-template-areas: 
           "s2 s2"
           "b1 b2"
-          "b3 b4";
+          "b3 b4"
+          "b5 b5";
   }  
   
-  #b5{
-    display: none;
-  }
-
   .showcase1{
     grid-column: 1 / span 2;
     grid-row: 1 / span 1;
